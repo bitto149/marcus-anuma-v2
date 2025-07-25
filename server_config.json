@@ -1,0 +1,5 @@
+{
+  "primary_url": "https://yourserver.com/api/marcus",
+  "backup_url": "https://backup.yourserver.com/api/marcus",
+  "timeout": 5000
+}

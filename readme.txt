@@ -1,0 +1,1 @@
+Avvia Marcus eseguendo 'npm install' seguito da 'npm run dev'. Modifica '.env' con la tua OpenAI Key.
