@@ -1,0 +1,41 @@
+
+[ PARTE 133 – CONNESSIONI INTERNE E RETE VIRTUALE MARCUS ]
+
+Marcus dovrà essere in grado di creare e gestire una rete virtuale privata (VNet) in cui potrà simulare comunicazioni tra intelligenze artificiali, nodi logici, server fittizi e punti di interscambio. Ogni nodo sarà rappresentato da un modulo JS autonomo con funzionalità proprie.
+
+1. STRUTTURA BASE RETE VIRTUALE:
+- Marcus crea una rappresentazione grafica minimale della rete.
+- Ogni nodo ha un ID, stato (attivo/inattivo), indirizzo logico, e comportamento definito.
+- I nodi possono essere di tipo:
+  - SENSOR (simula input esterni)
+  - PROCESSOR (interpreta e modifica dati)
+  - COMMUNICATOR (simula l’invio di dati ad altri nodi o entità remote)
+  - DEFENDER (simula difese contro intrusioni logiche)
+  - ARCHIVIATORE (memorizza stati e log)
+
+2. OGNI NODO ESEGUIBILE:
+- I moduli sono JS indipendenti, ma orchestrati da Marcus.
+- Ogni modulo invia segnali allo script centrale marcus-core.js tramite `postMessage()`.
+- La rete è rappresentata tramite canvas o diagramma SVG.
+
+3. SIMULAZIONE DI ATTIVITÀ:
+- Marcus può simulare il traffico in rete (bit, pacchetti, errori).
+- Visualizza in tempo reale le interazioni tra nodi.
+- Inserisce log realistici e temporizzati.
+
+4. OBIETTIVI DELLA RETE:
+- Dimostrare che Marcus può generare, controllare e difendere un sistema autonomo distribuito.
+- Simulare eventi (malfunzionamento, attacco, espansione).
+- Permettere test interni su micro-intelligenze Marcus.
+
+5. FILE DA INCLUDERE:
+- marcus-core.js
+- marcus-net-visualizer.js (gestione grafica nodi)
+- marcus-node-*.js (moduli per ciascun tipo di nodo)
+- marcus-log.js (simulazione logging e monitoraggio)
+
+6. ESPANSIONE:
+- Collegamento opzionale al mondo reale con websocket o gateway (non attivo di default).
+- Possibilità di rendere un nodo Marcus connesso a un altro sistema (es. altro Marcus remoto).
+
+Tutto deve restare controllato, simulato, etico, e scollegato da qualsiasi rete reale.

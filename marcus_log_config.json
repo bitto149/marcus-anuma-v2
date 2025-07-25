@@ -1,0 +1,6 @@
+// marcus_log_config.json
+{
+  "logLevel": "debug",
+  "logToFile": false,
+  "maxLogSizeKB": 1024
+}

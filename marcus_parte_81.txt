@@ -1,0 +1,2 @@
+// Contenuto placeholder per Marcus parte 81
+console.log('Marcus parte 81 caricata');

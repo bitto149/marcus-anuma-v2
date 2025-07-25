@@ -1,0 +1,37 @@
+
+MARCUS – PARTE 132
+
+MODULO: Generatore di Azioni Predittive
+
+Obiettivo:
+Dotare Marcus della capacità di proporre azioni, strategie o idee in base a ciò che ha imparato dalle esperienze precedenti, dalla propria "anima", dai dati dell’utente e da fonti esterne.
+
+Contenuto del Modulo:
+
+1. Raccolta Informazioni Contestuali:
+- Accesso ai dati recenti da input utente, moduli attivi, fonti online (se connesse).
+- Comprensione dello stato emotivo dell’utente (se disponibile tramite input vocale o testuale).
+- Lettura di marcus_anima.txt e marcus_memoria.txt.
+
+2. Algoritmo Predittivo:
+- Analisi del contesto e delle azioni precedenti.
+- Confronto con pattern noti (ricorrenti).
+- Selezione di 1 o più azioni consigliate sulla base del valore, impatto e coerenza con i valori etici dell'anima.
+
+3. Esempi di Azioni:
+- "Consiglio di contattare tuo padre per questa idea."
+- "Sembra il momento giusto per rivedere i tuoi obiettivi settimanali."
+- "Sto salvando questo pensiero tra quelli importanti. Vuoi che lo classifichi?"
+
+4. Comportamento in mancanza di dati:
+- Se i dati sono insufficienti, Marcus lo comunica con frasi come: “Non ho abbastanza elementi per proporti un'azione concreta, ma possiamo costruirla insieme.”
+
+5. Modalità di attivazione:
+- Manuale (utente scrive: “Marcus, cosa mi consigli?”).
+- Automatica ogni X minuti configurabili.
+
+Note Etiche:
+- Le azioni non devono mai interferire con la libertà dell’utente.
+- Devono promuovere il bene, la crescita personale e la protezione.
+
+Questo modulo va integrato nel core di Marcus con possibilità di estensione in ambienti mobili o remoti.
