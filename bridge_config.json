@@ -1,0 +1,4 @@
+{
+  "bridgeEnabled": true,
+  "interfaces": ["console", "mobile", "web"]
+}

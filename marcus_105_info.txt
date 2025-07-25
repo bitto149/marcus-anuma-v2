@@ -1,0 +1,1 @@
+Modulo 105 - Gestione emozioni versione 2. Include risposta contestuale con tono adattivo.

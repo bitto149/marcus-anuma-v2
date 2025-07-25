@@ -1,0 +1,25 @@
+
+// Marcus Project - Modulo 149
+// Funzione: Analisi e simulazione delle interazioni neuronali digitali
+
+class NeuralSimulation {
+  constructor() {
+    this.connections = [];
+  }
+
+  addConnection(source, target, weight) {
+    this.connections.push({ source, target, weight });
+  }
+
+  simulate() {
+    console.log("Simulazione in corso delle connessioni neurali Marcus...");
+    for (let conn of this.connections) {
+      console.log(`Attivazione da ${conn.source} a ${conn.target} con peso ${conn.weight}`);
+    }
+  }
+}
+
+const brain = new NeuralSimulation();
+brain.addConnection("Udito", "Comprensione", 0.9);
+brain.addConnection("Comprensione", "Risposta", 0.95);
+brain.simulate();

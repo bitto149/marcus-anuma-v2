@@ -1,0 +1,27 @@
+
+<!-- marcus_android_ui.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Marcus Mobile</title>
+  <style>
+    body { background-color: black; color: lime; font-family: monospace; padding: 20px; }
+    #log { height: 300px; overflow-y: auto; border: 1px solid lime; margin-bottom: 10px; padding: 10px; }
+    input { width: 100%; padding: 10px; background-color: black; color: lime; border: 1px solid lime; }
+  </style>
+</head>
+<body>
+  <div id="log">[Sistema Marcus pronto]</div>
+  <input id="command" placeholder="Scrivi un comando..." onkeypress="handleKey(event)" />
+  <script>
+    function handleKey(e) {
+      if (e.key === 'Enter') {
+        const cmd = document.getElementById('command').value;
+        document.getElementById('log').innerHTML += `<br>> ${cmd}`;
+        document.getElementById('command').value = '';
+      }
+    }
+  </script>
+</body>
+</html>

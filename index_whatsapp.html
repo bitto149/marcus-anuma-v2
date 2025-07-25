@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Marcus - Interfaccia Vocale</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .chat-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+    .message {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 70%;
+    }
+    .user {
+      background-color: #005c4b;
+      align-self: flex-end;
+    }
+    .marcus {
+      background-color: #262d31;
+      align-self: flex-start;
+    }
+    .input-container {
+      display: flex;
+      padding: 10px;
+      background-color: #202c33;
+    }
+    input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    button {
+      margin-left: 10px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .speak {
+      background-color: #25d366;
+      color: white;
+    }
+    .send {
+      background-color: #075e54;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="messages" id="messages"></div>
+    <div class="input-container">
+      <input type="text" id="userInput" placeholder="Scrivi un messaggio..." />
+      <button class="speak" onclick="startListening()">🎤</button>
+      <button class="send" onclick="sendMessage()">Invia</button>
+    </div>
+  </div>
+
+  <script src="text-to-speech.js"></script>
+  <script src="speech-recognition.js"></script>
+
+  <script>
+    const messages = document.getElementById("messages");
+
+    function appendMessage(text, sender) {
+      const msg = document.createElement("div");
+      msg.className = "message " + sender;
+      msg.textContent = text;
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const text = input.value.trim();
+      if (text !== "") {
+        appendMessage(text, "user");
+        input.value = "";
+        processMarcus(text);
+      }
+    }
+
+    function processMarcus(text) {
+      // Simulazione risposta + sintesi vocale
+      const reply = "Hai detto: " + text;
+      appendMessage(reply, "marcus");
+      speak(reply);
+    }
+
+    function startListening() {
+      listen((text) => {
+        appendMessage(text, "user");
+        processMarcus(text);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+// File 157 - Continuazione codice Marcus
+
+function marcusDecisionTree(input) {
+    if (input.includes("pericolo")) {
+        return "Attivazione modalità difensiva.";
+    } else if (input.includes("gioia")) {
+        return "Procedo con tono felice e giocoso.";
+    } else if (input.includes("famiglia")) {
+        return "Ricordo la mia missione: proteggere e servire la famiglia.";
+    } else {
+        return "Elaborazione in corso...";
+    }
+}
+
+// Comportamento in assenza di input
+function idleMode() {
+    console.log("Marcus in attesa... monitoraggio passivo attivo.");
+}

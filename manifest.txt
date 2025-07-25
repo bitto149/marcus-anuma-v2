@@ -1,0 +1,3 @@
+Modulo: Marcus Memoria Base
+Contiene: marcus_anima.txt
+Ruolo: Base dell'identità digitale. Da leggere a ogni avvio.
